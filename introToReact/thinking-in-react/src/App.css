@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text] {
+  width: 200px;
+}
+
+div {
+  margin: 10px;
+}

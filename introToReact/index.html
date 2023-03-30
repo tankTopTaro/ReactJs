@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>REACT Basics</h1>
+    <ul>
+        <li>A Javascript Library</li>
+        <li>Single Page App</li>
+        <li>Creating reusable</li>
+    </ul>
+
+    <hr>
+    <h2>WHAT IS JSX?</h2>
+    <p>Stands for JS XML</p>
+    <p>An XML / HTML like extension</p>
+    <hr>
+
+    <div id="testDiv">Hello WOrld!</div>
+    <script type="text/babel">
+        /* ReactDOM.render(
+            <h1>Hello React</h1>,
+            document.getElementById('testDiv')
+        ) */
+        function Hi() {
+            return <h1>Hi!!</h1>
+        }
+
+        ReactDOM.render(<Hi />, document.getElementById('testDiv'))
+    </script>
+</body>
+</html>
