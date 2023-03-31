@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Introduction to react</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>REACT BASICS</h1>
+    <ul>
+        <li>A JavaScript Lbirary</li>
+        <li>Single Page Applications</li>
+        <li>Creating reusable UI Components</li>
+    </ul>
+
+
+    <hr>
+    <h2>WHAT IS JSX?</h2>
+    <p>Stands for JS XML</p>
+    <p>An XML/HTML like extension</p>
+    <hr>
+
+    <h2>WHAT IS THE REACTDOM</h2>
+    <p>ReactDOM is a pacakge that provides DOM Specific methods.</p>
+    <p>Api containing methods</p>
+    <ul>
+        <li>render()</li>
+        <li>findDOMNode()</li>
+        <li>unmountComponentAtNode()</li>
+        <li>hydrate()</li>
+        <li>createPortal()</li>
+
+    </ul>
+
+    <h2>Before learning React we should learn ES6</h2>
+    <li>Arrow Functions</li>
+    <li>Classes</li>
+    <li>Variables (let, const, var)</li>
+    <li>Array methods (.map())</li>
+    <li>Destructuring</li>
+    <li>Modules</li>
+    <li>Ternary operator</li>
+    <li>Spread operator</li>
+    
+
+    <hr>
+    <h2>ARROW FUNCTION</h2>
+    <p>This is a regular function that display text of my favorite hero.</p>
+    <p id="hero"></p>
+    <p>This is an arrow function that display text of my second favorite hero.</p>
+    <p id="hero2"></p>
+
+    <p id="hero3"></p>
+
+
+
+<!--***************************   REACT CODE    **********************************-->
+
+    <div id="firstJSX"></div>
+
+    <div id="testDiv">HELLO WORLD!
+        
+    </div>
+
+    <div id="testDiv2"></div>
+    <div id="testDiv3"></div>
+    <div id="testDiv4"></div>
+    <div id="testDiv5"></div>
+    <p id="demo"></p>
+
+    <header id="firstColumn"></header>
+
+ <!--    <script type="text/babel">
+       /* function Hi(){
+            return <h1>This is my simple React exercise 2!!!</h1>
+        }
+
+        //ReactDOM.render(<h1>Hello React</h1>, document.getElementById('testDiv'));
+        ReactDOM.render(<Hi />, document.getElementById('testDiv'));*/
+
+    /*EXAMPLE 2*/
+    // const name = "Rod Lopez";
+     ReactDOM.render(<h1>Hello {name}</h1>, document.getElementById('testDiv'));
+        
+    /*CLASSES*/
+    /* Example 1
+    class Person{
+        constructor(name){
+            this.nickname = name;
+
+        }
+
+    }
+
+    const person = new Person('Cid');
+    document.write(person.nickname);
+    */
+
+    /*EXAMPLE 2
+    class Person{
+        constructor(skin){
+            this.skinColor = skin;
+            
+        }
+
+        color() {
+            return 'I am a Filipino I am proud of my skin color ' + this.skinColor;  
+        }
+
+    }
+
+    class Medium extends Person {
+        constructor(skin, med){
+            super(skin);
+            this.bodyBuilt = med;
+        }
+
+        showText() {
+            return this.color() + ', body built of ' + this.bodyBuilt;
+        }
+    }
+
+    const person = new Medium('Brown', 'Medium');
+    document.write(person.showText());
+    */
+
+    /* REGULAR FUNCTION DECLARATION */
+    var favoriteHero = function(){
+        return 'Spiderman';
+    }
+
+    var favoriteHero2 = () => {
+        return 'Roronoa Zorro';
+    }
+
+    var favoriteHero3 = () => "Kenshin Himura"; // this will only work if we have one single statement.
+
+    document.getElementById('hero').innerHTML = favoriteHero();
+    document.getElementById('hero2').innerHTML = favoriteHero2();
+    document.getElementById('hero3').innerHTML = favoriteHero3();
+
+    </script> -->
+    
+    <!-- <script type="text/babel">
+        // Array Methods .map()
+        const fruitsArray = [];
+        const fruits = fruitsArray.map((item) =>
+            <p>{item}</p>
+        );
+
+        ReactDOM.render(fruits, document.getElementById('testDiv'))
+    </script> -->
+
+    <!-- <script type="text/babel">
+        // old way of assigning array to a variable
+        /* const hero = ['one piece', 'marvel', 'dc'];
+        const zoro = hero[0]
+        const Spiderman = hero[1]
+        const batman = hero[2] */
+
+        // new approach Destructuring
+        /* const hero = ['one piece', 'marvel', 'dc'];
+        const [zoro, spiderman, batman, ironman] = hero;
+        document.write(zoro, batman) */
+
+        /* function calc(a, b) {
+            const add = a + b,
+            subtract = a - b,
+            multiply = a * b,
+            divide = a / b;
+
+            return [add, subtract, multiply, divide]
+        }
+
+        let calcal = calc(4, 5);
+
+        const addi = calcal[2]
+
+        const [add, subtract, multiply, divide] = calc(4, 5)
+
+        document.write(`<p>Sum ${addi} </p>`)
+        document.write(`<p>Difference ${subtract} </p>`)
+        document.write(`<p>Product ${multiply} </p>`)
+        document.write(`<p>Quotient ${divide} </p>`) */
+ 
+        /* // Spread operator
+        const n1 = [1,'two',3]
+        const n2 = [4,5,'six']
+        const n3 = [...n1, ...n2] 
+
+        const numlist = [10, 20, 30, 40, 50, 60, 70]
+        const [ten, twenty, ...rest] = numlist
+        document.write(`<p>${ten}</p>`)
+        document.write(`<p>${twenty}</p>`)
+        document.write(`<p>${rest}</p>`)
+
+        const dog = {
+            breed1: 'shih tzu',
+            sound2: 'wan',
+            name3: 'chichi'
+        }
+
+        const cat = {
+            breed: 'nekomata',
+            sound: 'nya',
+            name: 'hanekawa'
+        }
+
+        const dogCat = {...dog, ...cat}
+        console.log(dogCat)*/
+
+
+    </script>
+
+    <script type="module">
+        import {name, age} from './modules/main.js'
+
+        document.getElementById('demo').textContent = name + age
+
+        document.querySelector('#testDiv').innerHTML = age + name
+    </script> -->
+
+    <script type="text/babel">
+        /* const table = (
+            <table>
+                <tr><th>Name</th></tr>
+                <tr><td>chichi</td></tr>
+                <tr><td>sober</td></tr>
+                <tr><td>dixie</td></tr>
+                <tr><td>tipsy</td></tr>
+            </table>
+        );
+
+        ReactDOM.render(table, document.getElementById('firstColumn')) */
+
+        /* const className = <h1 className="cssClass">Hello CSS ClassName</h1>
+        const root = ReactDOM.createRoot(document.getElementById('firstJSX'))
+        root.render(className)
+
+        function tick() {
+            const timer = (<h1>{new Date().toLocaleTimeString()}</h1>)
+            ReactDOM.render(timer, document.getElementById('testDiv'))
+        }
+
+        setInterval(tick, 2000) */
+
+        // REACT Components
+        // Function Component
+        function Welcome() {
+            return (
+                <h1>React Function Component</h1>
+            );
+        }
+
+        // Class Component
+        class Welcome2 extends React.Component {
+            render() {
+                return (
+                    <h1>React Class Component</h1>
+                );
+            }
+        }
+
+        // Passing props to function Component
+        function Welcome3(props){
+            return(
+                <h1>hello {props.name}</h1>
+            );
+        }
+
+        // Passing props to class component
+        class Welcome4 extends React.Component {
+            render() {
+                return (
+                    <h1>Hello {this.props.name}</h1>
+                );
+            }
+        }
+
+        // Calling child component
+        function Parent(){
+            return (
+                <>
+                <h1>I'm the parent component</h1>
+                <Child />
+                </>
+            );
+        }
+
+        function Child(){
+            return (
+                <h2>I'm the child component</h2>
+            );
+        }
+
+        ReactDOM.render(<Welcome />, document.getElementById('testDiv'))
+        ReactDOM.render(<Welcome2 />, document.getElementById('testDiv2'))
+        ReactDOM.render(<Welcome3 name='joker' />, document.getElementById('testDiv3'))
+        ReactDOM.render(<Welcome4 name='morgana' />, document.getElementById('testDiv4'))
+        ReactDOM.render(<Parent />, document.getElementById('testDiv5'))
+    </script>
+</body>
+</html>
